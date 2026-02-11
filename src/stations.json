@@ -1,0 +1,410 @@
+[
+    {
+        "stationId": 1,
+        "stationNameEn": "Tuen Mun Ferry Pier",
+        "stationNameCht": "屯門碼頭",
+        "coordination": "22.372207954084022, 113.96610677659952"
+    },
+    {
+        "stationId": 10,
+        "stationNameEn": "Melody Garden",
+        "stationNameCht": "美樂",
+        "coordination": "22.37518430764709, 113.96110713941815"
+    },
+    {
+        "stationId": 15,
+        "stationNameEn": "Butterfly",
+        "stationNameCht": "蝴蝶",
+        "coordination": "22.378252803941976, 113.96181131989206"
+    },
+    {
+        "stationId": 20,
+        "stationNameEn": "Light Rail Depot",
+        "stationNameCht": "輕鐵車廠",
+        "coordination": "22.38157845344826, 113.96336819409608"
+    },
+    {
+        "stationId": 30,
+        "stationNameEn": "Lung Mun",
+        "stationNameCht": "龍門",
+        "coordination": "22.385274363674732, 113.96498828537585"
+    },
+    {
+        "stationId": 40,
+        "stationNameEn": "Tsing Shan Tsuen",
+        "stationNameCht": "青山村",
+        "coordination": "22.390898553691652, 113.96726838079323"
+    },
+    {
+        "stationId": 50,
+        "stationNameEn": "Tsing Wun",
+        "stationNameCht": "青雲",
+        "coordination": "22.39372714266827, 113.96748506495122"
+    },
+    {
+        "stationId": 60,
+        "stationNameEn": "Kin On",
+        "stationNameCht": "建安",
+        "coordination": "22.395298051137075, 113.96948853980825"
+    },
+    {
+        "stationId": 70,
+        "stationNameEn": "Ho Tin",
+        "stationNameCht": "河田",
+        "coordination": "22.39751288693919, 113.97309403044451"
+    },
+    {
+        "stationId": 75,
+        "stationNameEn": "Choy Yee Bridge",
+        "stationNameCht": "蔡意橋",
+        "coordination": "22.399998069236183, 113.97406351097304"
+    },
+    {
+        "stationId": 80,
+        "stationNameEn": "Affluence",
+        "stationNameCht": "澤豐",
+        "coordination": "22.404113440912624, 113.97603246864344"
+    },
+    {
+        "stationId": 90,
+        "stationNameEn": "Tuen Mun Hospital",
+        "stationNameCht": "屯門醫院",
+        "coordination": "22.407962654552463, 113.97713362574191"
+    },
+    {
+        "stationId": 100,
+        "stationNameEn": "Siu Hong",
+        "stationNameCht": "兆康",
+        "coordination": "22.4120330433717, 113.97839950902758"
+    },
+    {
+        "stationId": 110,
+        "stationNameEn": "Kei Lun",
+        "stationNameCht": "麒麟",
+        "coordination": "22.411021368525194, 113.9763391149365"
+    },
+    {
+        "stationId": 120,
+        "stationNameEn": "Ching Chung",
+        "stationNameCht": "青松",
+        "coordination": "22.4074606650134, 113.97255899748903"
+    },
+    {
+        "stationId": 130,
+        "stationNameEn": "Kin Sang",
+        "stationNameCht": "建生",
+        "coordination": "22.406913537113375, 113.96920404165456"
+    },
+    {
+        "stationId": 140,
+        "stationNameEn": "Tin King",
+        "stationNameCht": "田景",
+        "coordination": "22.407937591975845, 113.9664943704897"
+    },
+    {
+        "stationId": 150,
+        "stationNameEn": "Leung King",
+        "stationNameCht": "良景",
+        "coordination": "22.40670681883545, 113.96366033718371"
+    },
+    {
+        "stationId": 160,
+        "stationNameEn": "San Wai",
+        "stationNameCht": "新圍",
+        "coordination": "22.405333132218253, 113.96447131798612"
+    },
+    {
+        "stationId": 170,
+        "stationNameEn": "Shek Pai",
+        "stationNameCht": "石排",
+        "coordination": "22.401436122997975, 113.96780395757553"
+    },
+    {
+        "stationId": 180,
+        "stationNameEn": "Shan King (North)",
+        "stationNameCht": "山景 (北)",
+        "coordination": "22.398916086683684, 113.96711383075804"
+    },
+    {
+        "stationId": 190,
+        "stationNameEn": "Shan King (South)",
+        "stationNameCht": "山景 (南)",
+        "coordination": "22.39666286186425, 113.96607327330638"
+    },
+    {
+        "stationId": 200,
+        "stationNameEn": "Ming Kum",
+        "stationNameCht": "鳴琴",
+        "coordination": "22.397167295644593, 113.96732999980165"
+    },
+    {
+        "stationId": 212,
+        "stationNameEn": "Tai Hing (North)",
+        "stationNameCht": "大興 (北)",
+        "coordination": "22.404811796886523, 113.97000952631397"
+    },
+    {
+        "stationId": 220,
+        "stationNameEn": "Tai Hing (South)",
+        "stationNameCht": "大興 (南)",
+        "coordination": "22.403019661497613, 113.972060155149"
+    },
+    {
+        "stationId": 230,
+        "stationNameEn": "Ngan Wai",
+        "stationNameCht": "銀圍",
+        "coordination": "22.40272860455008, 113.97462437048966"
+    },
+    {
+        "stationId": 240,
+        "stationNameEn": "Siu Hei",
+        "stationNameCht": "兆禧",
+        "coordination": "22.37549291396663, 113.96691896694074"
+    },
+    {
+        "stationId": 250,
+        "stationNameEn": "Tuen Mun Swimming Pool",
+        "stationNameCht": "屯門泳池",
+        "coordination": "22.38183645357443, 113.97043308767589"
+    },
+    {
+        "stationId": 260,
+        "stationNameEn": "Goodview Garden",
+        "stationNameCht": "豐景園",
+        "coordination": "22.3835731162379, 113.9730566858378"
+    },
+    {
+        "stationId": 265,
+        "stationNameEn": "Siu Lun",
+        "stationNameCht": "兆麟",
+        "coordination": "22.38488669136618, 113.97507406864315"
+    },
+    {
+        "stationId": 270,
+        "stationNameEn": "On Ting",
+        "stationNameCht": "安定",
+        "coordination": "22.38808782399738, 113.97506999747851"
+    },
+    {
+        "stationId": 275,
+        "stationNameEn": "Yau Oi",
+        "stationNameCht": "友愛",
+        "coordination": "22.387013251841676, 113.97353543989273"
+    },
+    {
+        "stationId": 280,
+        "stationNameEn": "Town Centre",
+        "stationNameCht": "市中心",
+        "coordination": "22.391652057382018, 113.9750051839841"
+    },
+    {
+        "stationId": 295,
+        "stationNameEn": "Tuen Mun",
+        "stationNameCht": "屯門",
+        "coordination": "22.39408623427474, 113.97292755653724"
+    },
+    {
+        "stationId": 300,
+        "stationNameEn": "Pui To",
+        "stationNameCht": "杯渡",
+        "coordination": "22.394506518934012, 113.97637468366119"
+    },
+    {
+        "stationId": 310,
+        "stationNameEn": "Hoh Fuk Tong",
+        "stationNameCht": "何福堂",
+        "coordination": "22.397419290253342, 113.97739745779828"
+    },
+    {
+        "stationId": 320,
+        "stationNameEn": "San Hui",
+        "stationNameCht": "新墟",
+        "coordination": "22.40024230936142, 113.97797126782115"
+    },
+    {
+        "stationId": 330,
+        "stationNameEn": "Prime View",
+        "stationNameCht": "景峰",
+        "coordination": "22.403217799685084, 113.97943894792836"
+    },
+    {
+        "stationId": 340,
+        "stationNameEn": "Fung Tei",
+        "stationNameCht": "鳳地",
+        "coordination": "22.406996398029406, 113.97882686617105"
+    },
+    {
+        "stationId": 350,
+        "stationNameEn": "Lam Tei",
+        "stationNameCht": "藍地",
+        "coordination": "22.41861973368702, 113.98209916622574"
+    },
+    {
+        "stationId": 360,
+        "stationNameEn": "Nai Wai",
+        "stationNameCht": "泥圍",
+        "coordination": "22.42368856198698, 113.986556997479"
+    },
+    {
+        "stationId": 370,
+        "stationNameEn": "Chung Uk Tsuen",
+        "stationNameCht": "鍾屋村",
+        "coordination": "22.429682063251736, 113.99216869790715"
+    },
+    {
+        "stationId": 380,
+        "stationNameEn": "Hung Shui Kiu",
+        "stationNameCht": "洪水橋",
+        "coordination": "22.433679821308896, 113.99778751238995"
+    },
+    {
+        "stationId": 390,
+        "stationNameEn": "Tong Fong Tsuen",
+        "stationNameCht": "塘坊村",
+        "coordination": ""
+    },
+    {
+        "stationId": 400,
+        "stationNameEn": "Ping Shan",
+        "stationNameCht": "屏山",
+        "coordination": "22.44316088402205, 114.01223849350123"
+    },
+    {
+        "stationId": 425,
+        "stationNameEn": "Hang Mei Tsuen",
+        "stationNameCht": "坑尾村",
+        "coordination": "22.445115840641684, 114.00564310855577"
+    },
+    {
+        "stationId": 430,
+        "stationNameEn": "Tin Shui Wai",
+        "stationNameCht": "天水圍",
+        "coordination": "22.449258093346938, 114.00553279009195"
+    },
+    {
+        "stationId": 435,
+        "stationNameEn": "Tin Tsz",
+        "stationNameCht": "天慈",
+        "coordination": "22.452709608263593, 114.00610467677184"
+    },
+    {
+        "stationId": 445,
+        "stationNameEn": "Tin Yiu",
+        "stationNameCht": "天耀",
+        "coordination": "22.450580172266292, 114.00270691283451"
+    },
+    {
+        "stationId": 448,
+        "stationNameEn": "Locwood",
+        "stationNameCht": "樂湖",
+        "coordination": "22.453116561512754, 114.00121854183266"
+    },
+    {
+        "stationId": 450,
+        "stationNameEn": "Tin Wu",
+        "stationNameCht": "天湖",
+        "coordination": "22.45498227287918, 114.00576166959758"
+    },
+    {
+        "stationId": 455,
+        "stationNameEn": "Ginza",
+        "stationNameCht": "銀座",
+        "coordination": ""
+    },
+    {
+        "stationId": 460,
+        "stationNameEn": "Tin Shui",
+        "stationNameCht": "天瑞",
+        "coordination": "22.456174831419045, 113.99944722631464"
+    },
+    {
+        "stationId": 468,
+        "stationNameEn": "Chung Fu",
+        "stationNameCht": "頌富",
+        "coordination": "22.46193159137719, 113.99701990113901"
+    },
+    {
+        "stationId": 480,
+        "stationNameEn": "Tin Fu",
+        "stationNameCht": "天富",
+        "coordination": "22.46467799986526, 113.99760202631478"
+    },
+    {
+        "stationId": 490,
+        "stationNameEn": "Chestwood",
+        "stationNameCht": "翠湖",
+        "coordination": "22.45987990501781, 113.999498982139"
+    },
+    {
+        "stationId": 500,
+        "stationNameEn": "Tin Wing",
+        "stationNameCht": "天榮",
+        "coordination": "22.459741197244426, 114.0028865146663"
+    },
+    {
+        "stationId": 510,
+        "stationNameEn": "Tin Yuet",
+        "stationNameCht": "天悅",
+        "coordination": "22.46286171472853, 114.00165250330545"
+    },
+    {
+        "stationId": 520,
+        "stationNameEn": "Tin Sau",
+        "stationNameCht": "天秀",
+        "coordination": "22.465729657207284, 114.00307828583132"
+    },
+    {
+        "stationId": 530,
+        "stationNameEn": "Wetland Park",
+        "stationNameCht": "濕地公園",
+        "coordination": "22.469628252640526, 114.00256707188531"
+    },
+    {
+        "stationId": 540,
+        "stationNameEn": "Tin Heng",
+        "stationNameCht": "天恒",
+        "coordination": "22.46990326585082, 114.0006859533042"
+    },
+    {
+        "stationId": 550,
+        "stationNameEn": "Tin Yat",
+        "stationNameCht": "天逸",
+        "coordination": "22.466948553841824, 113.99920522631486"
+    },
+    {
+        "stationId": 560,
+        "stationNameEn": "Shui Pin Wai",
+        "stationNameCht": "水邊圍",
+        "coordination": "22.444473669163838, 114.0198631823304"
+    },
+    {
+        "stationId": 570,
+        "stationNameEn": "Fung Nin Road",
+        "stationNameCht": "豐年路",
+        "coordination": "22.44466888584271, 114.02373026679805"
+    },
+    {
+        "stationId": 580,
+        "stationNameEn": "Hong Lok Road",
+        "stationNameCht": "康樂路",
+        "coordination": "22.44468168155978, 114.02718179749328"
+    },
+    {
+        "stationId": 590,
+        "stationNameEn": "Tai Tong Road",
+        "stationNameCht": "大棠路",
+        "coordination": "22.44468168155978, 114.02718179749328"
+    },
+    {
+        "stationId": 600,
+        "stationNameEn": "Yuen Long",
+        "stationNameCht": "元朗",
+        "coordination": "22.446066964080035, 114.03379253980921"
+    },
+    {
+        "stationId": 920,
+        "stationNameEn": "Sam Shing",
+        "stationNameCht": "三聖",
+        "coordination": "22.382806600714336, 113.97776084407245"
+    }
+]
