@@ -123,10 +123,12 @@ function App() {
             <div className="route-list">
               {schedule.platform_list[currentPlatformIndex].route_list?.map((route, index) => (
                 <div key={index} className="route-item">
-                  <div className="route-number">{route.route_no}</div>
-                  <div className="destination">
-                    <div className="dest-en">{route.dest_en}</div>
-                    <div className="dest-ch">{route.dest_ch}</div>
+                  <div className="route-info">
+                    <div className="route-number">{route.route_no}</div>
+                    <div className="destination">
+                      <div className="dest-en">{route.dest_en}</div>
+                      <div className="dest-ch">{route.dest_ch}</div>
+                    </div>
                   </div>
                   <div className="time">
                      <div className="time-en">{route.time_en}</div>

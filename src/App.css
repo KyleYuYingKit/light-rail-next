@@ -107,6 +107,12 @@ header {
   border-radius: 4px;
 }
 
+.route-info {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
 .route-number {
   font-size: 1.2rem;
   font-weight: bold;
@@ -170,4 +176,100 @@ button:disabled {
 }
 .error {
   color: red;
+}
+
+@media (orientation: portrait) {
+  #root {
+    padding: 1rem;
+    width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .carousel-container {
+    position: relative;
+    gap: 0;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 0;
+  }
+
+  .nav-btn:hover {
+    background-color: #fff;
+    transform: translateY(-50%);
+  }
+
+  .nav-btn.prev {
+    left: 0;
+  }
+
+  .nav-btn.next {
+    right: 0;
+  }
+
+  .platform-card.carousel-card {
+    margin: 0 3rem;
+    width: auto;
+    max-width: none;
+    flex: 1;
+    /* Scale down in portrait (approx 60% of original) */
+    padding: 0.9rem;
+  }
+
+  .platform-card h2 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  /* Stack route number and destination vertically in portrait */
+  .route-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+  }
+
+  .destination {
+    padding: 0;
+    text-align: left;
+  }
+
+  .route-number {
+    font-size: 0.72rem;
+    min-width: 30px;
+    padding: 0.2rem 0.35rem;
+    /* Move route number to align with destination text */
+    align-self: flex-start; 
+  }
+
+  .dest-en {
+    font-size: 0.6rem;
+  }
+
+  .dest-ch {
+    font-size: 0.51rem;
+  }
+
+  .time, .time .time-en {
+    font-size: 0.6rem;
+    min-width: 42px;
+  }
+  
+  .details {
+    font-size: 0.48rem;
+    margin-left: 0.3rem;
+  }
 }
