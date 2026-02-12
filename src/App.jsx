@@ -8,6 +8,7 @@ function App() {
   const [error, setError] = useState(null)
   const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0)
   const [stationId, setStationId] = useState(100)
+  const [noStationFound, setNoStationFound] = useState(false)
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
 
@@ -41,17 +42,37 @@ function App() {
           let minDistance = Infinity
           let nearestId = 100
 
+          const getDistanceFromLatLonInMeters = (lat1, lon1, lat2, lon2) => {
+            const R = 6371000;
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = 
+              Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+              Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
+            const d = R * c; 
+            return d;
+          }
+
           stations.forEach((station) => {
             if (station.coordination) {
               const [lat, lng] = station.coordination.split(', ').map(Number)
-              const distance = Math.pow(latitude - lat, 2) + Math.pow(longitude - lng, 2)
+              const distance = getDistanceFromLatLonInMeters(latitude, longitude, lat, lng)
               if (distance < minDistance) {
                 minDistance = distance
                 nearestId = station.stationId
+                console.log(`Checking station ${station.stationNameEn} (ID: ${station.stationId}) - Distance: ${distance.toFixed(2)}m`)
               }
             }
           })
-          setStationId(nearestId)
+
+          if (minDistance > 500) {
+            setNoStationFound(true)
+          } else {
+            setNoStationFound(false)
+            setStationId(nearestId)
+          }
         },
         (err) => console.error(err)
       )
@@ -97,6 +118,8 @@ function App() {
       prevPlatform()
     }
   }
+
+  if (noStationFound) return <div className="error">No station found within 500m</div>
 
   if (loading && !schedule) return <div className="loading">Loading...</div>
 
