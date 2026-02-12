@@ -8,6 +8,8 @@ function App() {
   const [error, setError] = useState(null)
   const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0)
   const [stationId, setStationId] = useState(100)
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
 
   const getStationName = (id) => {
     const station = stations.find((s) => s.stationId === id)
@@ -74,6 +76,28 @@ function App() {
     setCurrentPlatformIndex((prev) => (prev - 1 + schedule.platform_list.length) % schedule.platform_list.length)
   }
 
+  const minSwipeDistance = 50
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX)
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+    if (isLeftSwipe) {
+      nextPlatform()
+    }
+    if (isRightSwipe) {
+      prevPlatform()
+    }
+  }
+
   if (loading && !schedule) return <div className="loading">Loading...</div>
 
   return (
@@ -85,7 +109,12 @@ function App() {
 
       {error && <div className="error">Error: {error}</div>}
 
-      <div className="carousel-container">
+      <div 
+        className="carousel-container"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         <button className="nav-btn prev" onClick={prevPlatform}>&lt;</button>
         
         {schedule?.platform_list && schedule.platform_list.length > 0 && (
