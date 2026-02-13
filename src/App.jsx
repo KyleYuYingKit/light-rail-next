@@ -9,12 +9,49 @@ function App() {
   const [currentPlatformIndex, setCurrentPlatformIndex] = useState(0)
   const [stationId, setStationId] = useState(100)
   const [noStationFound, setNoStationFound] = useState(false)
+  const [locationError, setLocationError] = useState(null)
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
+  const [language, setLanguage] = useState('en')
+
+  useEffect(() => {
+    if (navigator.language && navigator.language.toLowerCase().startsWith('zh')) {
+      setLanguage('zh')
+    }
+  }, [])
+
+  const isChinese = language === 'zh'
+
+  const labels = {
+    en: {
+      title: 'Light Rail Schedule',
+      systemTime: 'System Time',
+      platform: 'Platform',
+      noService: 'No service info',
+      cars: 'Car(s)',
+      loading: 'Loading...',
+      noStation: 'No station found within 500m',
+      locationError: 'Fail to get user location',
+      unknownStation: 'Unknown Station'
+    },
+    zh: {
+      title: '輕鐵班次',
+      systemTime: '系統時間',
+      platform: '月台',
+      noService: '沒有班次資訊',
+      cars: '卡車',
+      loading: '載入中...',
+      noStation: '500米內沒有車站',
+      locationError: '無法獲取位置',
+      unknownStation: '未知車站'
+    }
+  }
+
+  const t = labels[isChinese ? 'zh' : 'en']
 
   const getStationName = (id) => {
     const station = stations.find((s) => s.stationId === id)
-    return station ? station.stationNameEn : 'Unknown Station'
+    return station ? (isChinese ? station.stationNameCht : station.stationNameEn) : t.unknownStation
   }
 
   const fetchData = async (id = stationId) => {
@@ -36,8 +73,10 @@ function App() {
 
   useEffect(() => {
     if (navigator.geolocation) {
+      console.log('Getting user location...')
       navigator.geolocation.getCurrentPosition(
         (position) => {
+          console.log('User location obtained:', position.coords)
           const { latitude, longitude } = position.coords
           let minDistance = Infinity
           let nearestId = 100
@@ -67,15 +106,20 @@ function App() {
             }
           })
 
+          setStationId(nearestId)
           if (minDistance > 500) {
             setNoStationFound(true)
           } else {
             setNoStationFound(false)
-            setStationId(nearestId)
           }
         },
-        (err) => console.error(err)
+        (err) => {
+          console.error(err)
+          setLocationError('Fail to get user location')
+        }
       )
+    } else {
+      setLocationError('Geolocation is not supported by this browser.')
     }
   }, [])
 
@@ -119,15 +163,29 @@ function App() {
     }
   }
 
-  if (noStationFound) return <div className="error">No station found within 500m</div>
-
-  if (loading && !schedule) return <div className="loading">Loading...</div>
+  if (loading && !schedule) return <div className="loading">{t.loading}</div>
 
   return (
     <div className="container">
       <header>
-        <h1>Light Rail Schedule ({getStationName(stationId)})</h1>
-        {schedule && <span className="system-time">System Time: {schedule.system_time}</span>}
+        <h1>{t.title}</h1>
+        {locationError && <div className="error">{t.locationError}</div>}
+        {noStationFound && <div className="error">{t.noStation}</div>}
+        <select 
+          value={stationId} 
+          onChange={(e) => {
+            setStationId(parseInt(e.target.value))
+            setNoStationFound(false)
+          }}
+          className="station-selector"
+        >
+          {stations.map((station) => (
+            <option key={station.stationId} value={station.stationId}>
+              {isChinese ? station.stationNameCht : station.stationNameEn}
+            </option>
+          ))}
+        </select>
+        {schedule && <span className="system-time">{t.systemTime}: {schedule.system_time}</span>}
       </header>
 
       {error && <div className="error">Error: {error}</div>}
@@ -142,27 +200,30 @@ function App() {
         
         {schedule?.platform_list && schedule.platform_list.length > 0 && (
           <div className="platform-card carousel-card">
-            <h2>Platform {schedule.platform_list[currentPlatformIndex].platform_id}</h2>
+            <h2>{t.platform} {schedule.platform_list[currentPlatformIndex].platform_id}</h2>
             <div className="route-list">
               {schedule.platform_list[currentPlatformIndex].route_list?.map((route, index) => (
                 <div key={index} className="route-item">
                   <div className="route-info">
                     <div className="route-number">{route.route_no}</div>
                     <div className="destination">
-                      <div className="dest-en">{route.dest_en}</div>
-                      <div className="dest-ch">{route.dest_ch}</div>
+                      {isChinese ? (
+                          <div className="dest-ch">{route.dest_ch}</div>
+                      ) : (
+                          <div className="dest-en">{route.dest_en}</div>
+                      )}
                     </div>
                   </div>
                   <div className="time">
                      <div className="time-en">{route.time_en}</div>
                   </div>
                   <div className="details">
-                     {route.train_length} Car(s)
+                     {route.train_length} {t.cars}
                   </div>
                 </div>
               ))}
               {(!schedule.platform_list[currentPlatformIndex].route_list || schedule.platform_list[currentPlatformIndex].route_list.length === 0) && (
-                <div className="no-service">No service info</div>
+                <div className="no-service">{t.noService}</div>
               )}
             </div>
           </div>
