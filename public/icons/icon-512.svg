@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="76" fill="#646cff"/>
+  <text x="50%" y="38%" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial,sans-serif" font-weight="bold" font-size="92">Light</text>
+  <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial,sans-serif" font-weight="bold" font-size="92">Rail</text>
+  <text x="50%" y="80%" text-anchor="middle" dominant-baseline="middle" fill="rgba(255,255,255,0.6)" font-family="Arial,sans-serif" font-size="51">Schedule</text>
+</svg>
